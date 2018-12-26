@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,15 @@ using TechTalk.SpecFlow;
 
 namespace Autotrader.StepsDefinitions
 {
+    
+
     [Binding]
     public sealed class AutotraderSearch
     {
+        IWebDriver driver;
+
+       
+
         [Given(@"I am on Autotrader homepage")]
         public void GivenIAmOnAutotraderHomepage()
         {
